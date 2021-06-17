@@ -1,19 +1,19 @@
 
 create table publisher(
-       id serial primary key,
+       id integer primary key autoincrement,
        name text,
        country text
 );
 
 create table books(
-       id serial primary key,
+       id integer primary key autoincrement,
        title text,
        publisher integer references publisher(id)
        
 );
 
 create table subjects(
-       id serial primary key,
+       id integer primary key autoincrement,
        name text
 );
 create table books_subjects(
