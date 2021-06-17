@@ -1,3 +1,7 @@
+
+PRAGMA foreign_keys = ON;
+
+
 insert into publisher (name , country) values ( 'PHI' , 'India');
 insert into publisher (name , country) values ( 'Harper' , 'USA');
 insert into publisher (name , country) values ( 'GCP' , 'USA');
