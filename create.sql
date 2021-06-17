@@ -8,7 +8,7 @@ create table publisher(
 create table books(
        id serial primary key,
        title text,
-       publisher  references publisher(id)
+       publisher integer references publisher(id)
        
 );
 
@@ -17,8 +17,8 @@ create table subjects(
        name text
 );
 create table books_subjects(
-       book  references books(id), 
-       subject  references subjects(id)  
+       book integer references books(id), 
+       subject integer references subjects(id)  
        
 );
 
