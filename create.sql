@@ -1,4 +1,3 @@
-PRAGMA foreign_keys=ON;
 
 create table publisher(
        id serial primary key,
@@ -9,8 +8,8 @@ create table publisher(
 create table books(
        id serial primary key,
        title text,
-       publisher serial,
-       foreign key(publisher) references publisher(id)
+       publisher serial references publisher(id),
+       
 );
 
 create table subjects(
@@ -18,10 +17,9 @@ create table subjects(
        name text
 );
 create table books_subjects(
-       book serial, 
-       subject serial,  
-       foreign key(book) references books(id),
-       foreign key(subject) references subjects(id)
+       book serial references books(id), 
+       subject serial references subjects(id),  
+       
 );
 
 
